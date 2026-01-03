@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logic Test</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .box {
+      max-width: 400px;
+      padding: 30px;
+      border-radius: 12px;
+      background: #020617;
+      box-shadow: 0 0 30px rgba(99,102,241,0.3);
+    }
+    .typing {
+      border-right: 2px solid;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(40), blink .6s step-end infinite alternate;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #6366f1;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2 class="typing">Running compatibility check...</h2>
+    <p id="text"></p>
+    <button onclick="run()">Continue</button>
+  </div>
+
+  <script>
+    function run() {
+      document.getElementById("text").innerText =
+        "Result: You’re intelligent, kind, and statistically rare.\nConclusion: Anyone would be lucky to know you 🙂";
+    }
+  </script>
+
+</body>
+</html>
