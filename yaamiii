@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Just Being Honest</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .card {
+      background: rgba(0,0,0,0.5);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 420px;
+    }
+    button {
+      margin: 15px;
+      padding: 10px 22px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .yes {
+      background: #22c55e;
+      color: black;
+    }
+    .no {
+      background: #94a3b8;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Hey 👋</h2>
+    <p>
+      I made this because I wanted to be honest.<br><br>
+      I like you, and I think you’re genuinely amazing.
+      <br><br>
+      No pressure at all — I just wanted you to know.
+    </p>
+
+    <button class="yes" onclick="yes()">I like you too 😊</button>
+    <button class="no" onclick="no()">I appreciate you being honest</button>
+
+    <p id="response"></p>
+  </div>
+
+  <script>
+    function yes() {
+      document.getElementById("response").innerText =
+        "That made my day 😊 Thanks for being honest too.";
+    }
+
+    function no() {
+      document.getElementById("response").innerText =
+        "All good. I respect you, and I’m glad I told you.";
+    }
+  </script>
+
+</body>
+</html>
 
